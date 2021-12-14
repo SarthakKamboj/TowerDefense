@@ -8,7 +8,7 @@ public class FollowPath : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] float rotationSpeed = 2f;
 
-    [SerializeField] TMP_Text enemyPassedText;
+    TMP_Text enemyPassedText;
 
     static int numReachedEnd = 0;
 
@@ -83,7 +83,7 @@ public class FollowPath : MonoBehaviour
     void ReachedEnd()
     {
         numReachedEnd += 1;
-        enemyPassedText.text = "Enemies Reached: " + numReachedEnd;
+        enemyPassedText.text = "Reached: " + numReachedEnd;
         Destroy(gameObject);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GoToPathStart : MonoBehaviour
+public class EnemyGenerator : MonoBehaviour
 {
 
     [SerializeField] float timeBetweenSpawns = 5f;
