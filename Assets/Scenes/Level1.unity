@@ -1947,7 +1947,6 @@ GameObject:
   - component: {fileID: 1425760136}
   - component: {fileID: 1425760135}
   - component: {fileID: 1425760134}
-  - component: {fileID: 1425760138}
   - component: {fileID: 1425760137}
   m_Layer: 0
   m_Name: Main Camera
@@ -2014,13 +2013,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425760133}
-  m_LocalRotation: {x: 0.19810036, y: -0.000000016865382, z: 0.0000000034085905, w: 0.98018175}
-  m_LocalPosition: {x: 0, y: 18.45, z: -43.48}
+  m_LocalRotation: {x: 0.24875791, y: -0.000000017019703, z: 0.0000000025277507, w: 0.96856576}
+  m_LocalPosition: {x: 0, y: 19.6, z: -43.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 23.236002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 28.808, y: 0, z: 0}
 --- !u!114 &1425760137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2033,23 +2032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fa79e6c238c304193567f5793a3548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 100
-  panSpeed: 100
---- !u!114 &1425760138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425760133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70b0045d09ba4b047a6e919ba1c359bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraCenter: {fileID: 39398061}
-  cameraPanSpeed: 1
-  zoomIntensity: 10
+  scrollSpeed: 1000
+  panSpeed: 20
+  rotateSpeed: 100
 --- !u!1001 &1446477717
 PrefabInstance:
   m_ObjectHideFlags: 0
