@@ -5,8 +5,9 @@ public class CameraPanSelfBased : MonoBehaviour
     [SerializeField] float scrollSpeed = 100f;
     [SerializeField] float panSpeed = 100f;
     [SerializeField] float verticalMovementSpeed = 10f;
+    [SerializeField] float horizontalMovementSpeed = 10f;
 
-    void Update()
+    void LateUpdate()
     {
         float mouseX = Input.GetAxisRaw("Mouse X");
         float mouseY = Input.GetAxisRaw("Mouse Y");
@@ -27,12 +28,7 @@ public class CameraPanSelfBased : MonoBehaviour
 
         if (Input.GetMouseButton(2))
         {
-            if (mouseX != 0 && Mathf.Abs(mouseX) > Mathf.Abs(mouseY))
-            {
-                transform.position -= transform.right * mouseX * panSpeed * Time.deltaTime;
-            }
-
-            if (mouseY != 0)
+            if (Mathf.Abs(mouseY) > 0.1f)
             {
                 Vector3 forward = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
                 transform.position -= forward * mouseY * panSpeed * Time.deltaTime;
@@ -56,6 +52,15 @@ public class CameraPanSelfBased : MonoBehaviour
             Vector3 pos = transform.position;
             pos.y -= verticalMovementSpeed * Time.deltaTime;
             transform.position = pos;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.position -= transform.right * horizontalMovementSpeed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            transform.position += transform.right * horizontalMovementSpeed * Time.deltaTime;
         }
     }
 }
