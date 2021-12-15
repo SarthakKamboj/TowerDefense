@@ -3,9 +3,11 @@
 public class ShootingTower : MonoBehaviour
 {
 
+    [SerializeField] Transform shootingPipeStart, shootingPipeEnd;
     [SerializeField] Transform shootingPoint;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float timeBetweenShots;
+    [SerializeField] float force = 1000f;
 
     float timeUntilNextShot;
 
@@ -27,6 +29,9 @@ public class ShootingTower : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
+        Vector3 dir = (shootingPipeEnd.position - shootingPipeStart.position).normalized;
+        GameObject bullet = Instantiate(bulletPrefab, shootingPipeStart.position, Quaternion.identity);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.AddForce(dir * force, ForceMode.Impulse);
     }
 }

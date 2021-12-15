@@ -19,7 +19,10 @@ public class MouseSelector : MonoBehaviour
         if (!moveEnabled && Input.GetMouseButton(0) && Physics.Raycast(ray, out selectedOut, Mathf.Infinity, towerLayerMask))
         {
             selectedTower = selectedOut.collider.transform;
-            selectedTowerYExtent = selectedTower.Find("GFX").GetComponent<Renderer>().bounds.extents.y;
+            // selectedTowerYExtent = selectedTower.Find("GFX").GetComponent<Renderer>().bounds.extents.y;
+            Collider towerCollider = selectedTower.GetComponent<Collider>();
+            selectedTowerYExtent = towerCollider.bounds.extents.y;
+            // selectedTowerYExtent = 0f;
             moveEnabled = true;
         }
 
