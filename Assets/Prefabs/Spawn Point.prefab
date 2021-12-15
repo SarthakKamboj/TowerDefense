@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7071245047882613436}
   - component: {fileID: 2571277311044412358}
+  - component: {fileID: 5457089585611818846}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Untagged
@@ -118,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7071245047882613437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1203103, y: 0.89, z: 4.410098}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7071245047326666800}
@@ -143,6 +144,22 @@ MonoBehaviour:
   timeBetweenSpawns: 1
   enemyPrefab: {fileID: 416468060614117728, guid: a2fc9c504fe8e6245abfe5d00496ddd0,
     type: 3}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!65 &5457089585611818846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071245047882613437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.445341, y: 7.670403, z: 2.3455427}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3338765130194088524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,12 +275,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5abbe570606326b438386f738631d7f9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5abbe570606326b438386f738631d7f9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5abbe570606326b438386f738631d7f9,
         type: 3}
