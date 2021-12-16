@@ -24,7 +24,8 @@ public class GoToPathEnd : MonoBehaviour
         ray.direction = Vector3.down;
         ray.origin = last.position;
         float yExtent = collider.bounds.extents.y;
-        Vector3 transformOffset = RemoveY(doorTransform.position - transform.position);
+        // Vector3 transformOffset = RemoveY(doorTransform.position - transform.position);
+        Vector3 transformOffset = RemoveY(transform.position - doorTransform.position);
         if (Physics.Raycast(ray, out groundHit, Mathf.Infinity, groundLayerMask))
         {
             transform.position = (groundHit.point + transformOffset) + Vector3.up * yExtent;
